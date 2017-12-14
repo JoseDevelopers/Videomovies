@@ -1,0 +1,27 @@
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h2>Nueva película</h2>
+  </div>
+  <div class="panel-body">
+    <form class="form-inline" action="index.html" method="post">
+      <label for="titulo">Título: </label>
+      <input type="text" name="titulo" value="" class="form-control">
+      <label for="anio">Año: </label>
+      <select class="form-control" name="anio">
+        <option *ngFor="let anio of anios" value="{{anio}}">{{anio}}</option>
+      </select>
+      <label for="tamanio">Tamaño: </label>
+      <input type="text" name="tamanio" value="" class="form-control">
+      <label for="original">Original: </label>
+      <input type="checkbox" name="original" value="" class="form-control">
+      <label for="automatico">Automático: </label>
+      <input type="checkbox" name="automatico" value="" class="form-control">
+      <label for="genero">Género: </label>
+      <select class="form-control" name="genero">
+        <option *ngFor="let genero of generos" value="{{genero.id}}">{{genero.nombre}}</option>
+      </select>
+      <label for="duracion">Duración: </label>
+      <input type="text" name="duracion" value="" class="form-control">
+    </form>
+  </div>
+</div>
