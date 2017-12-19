@@ -7,6 +7,10 @@ import { AppComponent } from './app.component';
 import { PeliculasComponent } from './peliculas/peliculas.component';
 import { AddPeliculaComponent } from './peliculas/addPelicula.component';
 import { HomeComponent } from './home/home.component';
+import { BuscadorComponent } from './buscador/buscador.component';
+
+// Importamos el nuevo modulo
+import { ModuloConfiguracionModule } from './moduloconfiguracion/modulo-configuracion.module';
 import { ConversorPipe } from './pipes/conversor.pipe';
 
 import { HttpModule} from '@angular/http';  // <------------------------------- AGREGAR
@@ -16,11 +20,13 @@ import { HttpModule} from '@angular/http';  // <------------------------------- 
     HomeComponent,
     PeliculasComponent,
     AddPeliculaComponent,
+    BuscadorComponent,
     ConversorPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ModuloConfiguracionModule,
     routing,
     HttpModule // <------------------------------- AGREGAR
   ],

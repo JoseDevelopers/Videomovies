@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="col-md-12">
+      <div class="col-md-11">
+        <input type="text" [(ngModel)]="buscador" name="buscador" value="" class="form-inline form-control" placeholder="Buscar por título de película">
+      </div>
+      <div class="col-md-1">
+        <button type="button" (click)="buscar()" class="btn btn-danger" name="button">Buscar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="titulo != ''" class="">
+  <div class="panel panel-default">
+    <div class="col-md-3" *ngFor="let elemento of resultado.results">
+      <div class="panel-body">
+        <h5>{{elemento.title}}</h5>
+        <img src="{{TheMovieDB_img}}w154{{elemento.poster_path}}" class="img-fluid pull-xs-left" alt="..."><br>
+        <b>Puntuacion: </b>{{elemento.vote_average}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="clearfix">
+
+</div>
