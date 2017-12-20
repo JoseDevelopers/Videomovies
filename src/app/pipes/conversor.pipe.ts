@@ -11,4 +11,5 @@ export class ConversorPipe implements PipeTransform{
 
     return result;
   }
+
 }

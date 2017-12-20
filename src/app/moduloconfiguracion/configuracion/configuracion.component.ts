@@ -28,6 +28,7 @@ export class ConfiguracionComponent implements OnInit{
     this._theMovieDBService.getConfiguracion().subscribe(
       respuesta => {
         this.urlTheMovieDB_img = respuesta.images.base_url;
+        console.log(respuesta);
       }
     );
   }
